@@ -59,9 +59,9 @@ void merge(int pData[], int l, int m, int r)
 	int num1 = m - l + 1;
 	int num2 = r - m;
 	
-	int* L = (int*)malloc(n1 * sizeof(int));
-	int* R = (int*)malloc(n2 * sizeof(int));
-	extraMemoryAllocated += n1 * sizeof(int) + n2 * sizeof(int);
+	int* L = (int*)malloc(num1 * sizeof(int));
+	int* R = (int*)malloc(num2 * sizeof(int));
+	extraMemoryAllocated += num1 * sizeof(int) + num2 * sizeof(int);
 	
 	for(i = 0; i < num1; i++)
 	{
@@ -106,7 +106,7 @@ void merge(int pData[], int l, int m, int r)
 		k++;
 	}
 	free(L);
-	free(J);
+	free(R);
 }
 
 void mergeSort(int pData[], int l, int r)
